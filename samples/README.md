@@ -1,6 +1,6 @@
 # The Blippar SDK Sample Apps
 
-This repository contains the sample iOS and Android apps to show how to use the Blippar SDK.
+This directory contains the sample iOS and Android apps to show how to use the Blippar SDK.
 
 WARNING! The iOS or Android apps do not contain the Blippar SDK libraries itself, you must put the library into the project yourself.
 
