@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z3Q-6p-fi4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blippar Sample-->
+        <scene sceneID="CbM-Gb-xRm">
+            <objects>
+                <tableViewController id="vo7-VP-7t2" customClass="SampleTableViewController" customModule="SwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="32w-3k-kY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowBlippsCell" id="A5E-h5-gp8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A5E-h5-gp8" id="gLS-17-rZ1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="JET-hv-2ED"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vo7-VP-7t2" id="SNa-De-bwV"/>
+                            <outlet property="delegate" destination="vo7-VP-7t2" id="Itn-o4-eeo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Blippar Sample" id="pNB-rO-Jka"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1Z-q6-8FA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="-45"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YeU-wI-gbZ">
+            <objects>
+                <navigationController id="Z3Q-6p-fi4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hie-Pb-cNC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vo7-VP-7t2" kind="relationship" relationship="rootViewController" id="5FB-zx-WAO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCp-LZ-UDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1086" y="-45"/>
+        </scene>
+        <!--Blippar View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BlipparViewController" customModule="SwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCI-BL-VxM" customClass="BlipparSDKView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y97-s6-eKq" customClass="ProgressView" customModule="SwiftSample" customModuleProvider="target">
+                                <rect key="frame" x="10" y="74" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Eqr-TG-bvc"/>
+                                    <constraint firstAttribute="height" constant="20" id="xpa-y0-pr4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIq-dt-zVz" customClass="BlipparSDKDebugView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-CV-qyj" userLabel="Blipp Close Button">
+                                <rect key="frame" x="117.5" y="603" width="140" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="QO4-Nz-4l2"/>
+                                    <constraint firstAttribute="height" constant="44" id="nfY-Yp-MmS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Close Blipp">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBlipButtonActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygb-CT-5Ls"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nIq-dt-zVz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3xM-Hj-dmo"/>
+                            <constraint firstAttribute="trailing" secondItem="rCI-BL-VxM" secondAttribute="trailing" id="5I0-sI-JxV"/>
+                            <constraint firstItem="nIq-dt-zVz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9HC-4s-G24"/>
+                            <constraint firstItem="nIq-dt-zVz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="F0h-oe-rGp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffd-CV-qyj" secondAttribute="bottom" constant="20" id="LZP-nW-xyR"/>
+                            <constraint firstItem="rCI-BL-VxM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PRe-Pv-pxQ"/>
+                            <constraint firstItem="y97-s6-eKq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="VjZ-rK-pln"/>
+                            <constraint firstItem="Ffd-CV-qyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBx-Yr-p8B"/>
+                            <constraint firstItem="nIq-dt-zVz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bVy-A7-s4V"/>
+                            <constraint firstItem="rCI-BL-VxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fUg-e1-RQh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCI-BL-VxM" secondAttribute="bottom" id="irB-Yd-35n"/>
+                            <constraint firstItem="y97-s6-eKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="j5h-lD-B8j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blippCloseButton" destination="Ffd-CV-qyj" id="wgL-yb-Xxw"/>
+                        <outlet property="blipparView" destination="rCI-BL-VxM" id="XSO-P9-Nmg"/>
+                        <outlet property="progressView" destination="y97-s6-eKq" id="ZYj-uE-fYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="-45"/>
+        </scene>
+    </scenes>
+</document>

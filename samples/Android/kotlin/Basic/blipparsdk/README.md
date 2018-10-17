@@ -1,0 +1,1 @@
+Place your BlipparSDK.framework file here
