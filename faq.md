@@ -4,6 +4,7 @@
 * [General](#general)
 * [Custom Application Creation](#custom-application-creation)
 * [Content Creation And Publishing](#content-creation-and-publishing)
+* [Technical](#technical)
 * [Analytics](#analytics)
 * [Pricing](#pricing)
 * [Support And Updates](#support-and-updates)
@@ -175,7 +176,7 @@ The Blippar platform supports regionalised triggering of AR content, at a countr
 
 Yes. When publishing your blipp via the Hub CMS you will see an option to decide what app(s) the blipp can be detected on.
 
-============================================================
+---
 
 # Technical
 
