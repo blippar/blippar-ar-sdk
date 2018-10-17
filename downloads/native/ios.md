@@ -1,6 +1,6 @@
 ![alt SDK Logo](https://d1g04oefhuhm4y.cloudfront.net/media/uploads/sdk_home_title_image_result_cut.png)
 
-# **iOS Releases**
+# iOS Releases
 
 ## **Latest Release**
 
@@ -12,7 +12,7 @@ Contact support to gain access to the SDK.
 
 [Release Notes](../release-notes/blippar-sdk-3.0.0-release-notes.md) ([API Reference](http://phqeq0ldrt2zcqjc2xhayirsvmil1qz2.s3-website-eu-west-1.amazonaws.com/blippar-sdk/api/ios/3.0.0))
 
-## ** Previous Releases**
+## Previous Releases
 
 We strongly advise against using any previous SDK versions unless you know what you are doing and you have a strong reason to use the outdated SDK. The latest SDK is tested to work with the current server configuration and has most of the known issues fixed. There is no customer support for the old SDK versions and no warranty that the old SDK version works after it has been deprecated for more than six months. 
 
