@@ -28,6 +28,6 @@ This shows a very basic integration of the BlipparSDK. It has the camera feed di
 
 When a blipp is detected it launches the blipp and enables a UI button to close the blipp again.
 
-You can try [these images](https://developer.blippar.com/portal/sdk/guides/sample-markers) to test scanning.
+You can try [these images](sample-markers.md) to test scanning.
 
 More examples to be added soon!
