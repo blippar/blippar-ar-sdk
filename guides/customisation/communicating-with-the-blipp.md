@@ -38,7 +38,12 @@ The blipp runs in a different thread to the UI thread, so calls into the blipp a
 
 ## Calling the host app from the blipp
 
-The BlippJS is able to use the App `sendAppEvent` function. This function takes an event name, and an optional JSON string.
+The BlippJS is able to use the App `sendAppEvent` function.
+
+To access this feature you need to use the BlippJS library `1.9.1`. You can set this in your package.json associated with your blipp.
+If running pre-1.9.1 you can use `blipp.getApp().dispatchEvent` instead.
+
+ This function takes an event name, and an optional JSON string.
 
     // No json passsed to the app
     blipp.getApp().sendAppEvent("event1");
