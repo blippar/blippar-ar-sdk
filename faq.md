@@ -29,7 +29,7 @@ Here is a short list of the main features the SDK provides:
 * The SDK supports native AR (ARKit and ARCore) through markerless SLAM. Surface detection will be available very soon in a future release.
 * Supports all [Blippbuilder Script API](https://developer.blippar.com/portal/ar-api/home/) features.
 
-The SDK does not provide content in itself. The creation of blipps can be done via BlippBuilder, a self service tool for creating blipps. Alternatively blipps can be created by developers by using the [Blippbuilder Script API](https://developer.blippar.com/portal/ar-api/home/).
+The SDK does not provide content in itself. The creation of blipps can be done via Blippbuilder, a self service tool for creating blipps. Alternatively blipps can be created by developers by using the [Blippbuilder Script API](https://developer.blippar.com/portal/ar-api/home/).
 
 ## What are the requirements for the SDK to be compatible with an app?
 

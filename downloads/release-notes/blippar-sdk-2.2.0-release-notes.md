@@ -118,6 +118,6 @@ None
 
 February 2018
 
-### **BlippBuilder Script Maximum Library Supported**
+### **Blippbuilder Script Maximum Library Supported**
 
 1.7.8

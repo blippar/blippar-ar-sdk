@@ -28,7 +28,7 @@ N/A
 
 September 2017
 
-## **BlippBuilder Script Maximum Library Supported**
+## **Blippbuilder Script Maximum Library Supported**
 
 1.7.8
 
