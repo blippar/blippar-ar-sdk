@@ -12,11 +12,11 @@ The Blippar SDK has a number of strings that are embedded in the UI. It is possi
 
 ## User UI Elements
 
-In BlippJS there is an API modify the state of UI elements called [uiVisible](https://developer.blippar.com/portal/ar-api/documentation/method/Blipp/uiVisible/). This command takes a UI element of a given name and allows a blipp developer to modify whether it is visible or not. This can be used if there are several blipps linked to the host app and buttons are needed in some scenarios but not in others.
+In Blippbuilder Script there is an API modify the state of UI elements called [uiVisible](https://developer.blippar.com/portal/ar-api/documentation/method/Blipp/uiVisible/). This command takes a UI element of a given name and allows a blipp developer to modify whether it is visible or not. This can be used if there are several blipps linked to the host app and buttons are needed in some scenarios but not in others.
 
 ### Registration Process
 
-The BlipparSDK allows a host app to register UI elements which can then be targetted directly from the BlippJS script.
+The BlipparSDK allows a host app to register UI elements which can then be targetted directly from the Blippbuilder Script script.
 
 For example:
 

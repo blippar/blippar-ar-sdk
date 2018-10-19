@@ -28,7 +28,7 @@ N/A
 
 September 2017
 
-## **Blipp JS Maximum Library Supported**
+## **BlippBuilder Script Maximum Library Supported**
 
 1.7.8
 

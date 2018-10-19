@@ -27,9 +27,9 @@ Here is a short list of the main features the SDK provides:
 * The SDK supports 3D markers for standard shapes - ex. Cones, cylinders, spheres, cuboid.
 * Face tracking through the OS face tracking and an enhanced in-house face tracker.
 * The SDK supports native AR (ARKit and ARCore) through markerless SLAM. Surface detection will be available very soon in a future release.
-* Supports all [BlippJS API](https://developer.blippar.com/portal/ar-api/home/) features.
+* Supports all [Blippbuilder Script API](https://developer.blippar.com/portal/ar-api/home/) features.
 
-The SDK does not provide content in itself. The creation of blipps can be done via BlippBuilder, a self service tool for creating blipps. Alternatively blipps can be created by developers by using the [BlippJS API](https://developer.blippar.com/portal/ar-api/home/).
+The SDK does not provide content in itself. The creation of blipps can be done via BlippBuilder, a self service tool for creating blipps. Alternatively blipps can be created by developers by using the [Blippbuilder Script API](https://developer.blippar.com/portal/ar-api/home/).
 
 ## What are the requirements for the SDK to be compatible with an app?
 
@@ -168,11 +168,11 @@ Both our self-service creation tools: Blippbuilder and Blippbuilder Script can b
 
 ## Does the Blippar SDK also support Geo?
 
-The Blippar platform supports regionalised triggering of AR content, at a country level. However it is possible for an app to integrate whatever location service they wish and programatically launch blipps according some criteria. Through the BlippJS location APIs or app <-> blipp communication it is possible to develop reasonably complex geo-features in blipps.
+The Blippar platform supports regionalised triggering of AR content, at a country level. However it is possible for an app to integrate whatever location service they wish and programatically launch blipps according some criteria. Through the Blippbuilder Script location APIs or app <-> blipp communication it is possible to develop reasonably complex geo-features in blipps.
 
 ## Can we publish a Blipp both on the SDK and on Blippar? How do we check the Blipp pushed on Blippar?
 
-Yes. When publishing your blipp via the Hub CMS you will see an option to decide what app(s) the blipp can be detected on.
+Yes. When publishing your blipp via the Blippar Hub you will see an option to decide what app(s) the blipp can be detected on.
 
 ---
 

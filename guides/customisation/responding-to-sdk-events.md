@@ -36,7 +36,7 @@ However a host app may want to do something custom such as using SFSafariViewCon
 
 There is a separate callback for PDFs vs HTML as it is possible to render the content in a different way. For example on Android a developer could forward to an external browser/app whereas iOS can use the native UIWebView to render the content.
 
-The `HTMLConfig` that is passed to various calls contains various attributes that can be set directly from the BlippJS call. Local HTML is html that is downloaded as part of the blipp assets and loaded directly from a file path. 
+The `HTMLConfig` that is passed to various calls contains various attributes that can be set directly from the Blippbuilder Script call. Local HTML is html that is downloaded as part of the blipp assets and loaded directly from a file path. 
 
 External HTML is a request to open HTML in an external browser and will leave the app. Technically it does not have to be HTML, the blipp could be opening an external app using a system protocol e.g. `twitter://`. On iOS the SDK uses [openURL](https://developer.apple.com/documentation/uikit/uiapplication/1648685-open) and on Android it uses `startActivity` with the `ACTION_VIEW` intent. Both the `tel:` and `mailto:` protocols are supported.  
 
@@ -59,7 +59,7 @@ If some custom behaviour is needed the developer can implement these protocols a
 The sharing assets types supported are images and video.
 The sharing targets supported by the SDK are email, generic sharing (i.e. using the platform sharing mechanism) or in-sdk photo sharing which shows a custom view in the SDK with the photo taken as a background. From that view the user can share the photo with social media.
 
-With email sharing it is possible from the BlippJS to customise the share subject, recipients and body of the message.
+With email sharing it is possible from the Blippbuilder Script to customise the share subject, recipients and body of the message.
 
 >![Info Icon](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/BlipparSDK_Info.png) 
 >When the SDK launches a modal view, it goes into a suspended state. On returning from a modal interface it is critical to call `onBlippOperationCompleted`, otherwise the rendering and blipp operation will remain suspended.
