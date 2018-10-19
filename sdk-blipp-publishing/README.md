@@ -147,14 +147,14 @@ If you need to update a set of target countries, applications or test codes for 
 1. Login to hub UI.
 2. Hit "Create a Blipp" and select "Blippbuilder" from the options:
 
-  ![BlippBuilder choose tool](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0180.bb_choose_tool.png)
+  ![Blippbuilder choose tool](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0180.bb_choose_tool.png)
 3. Upload your marker and hit the button "Continue":
 
-  ![BlippBuilder create blipp](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0190.bb_create_bipp.png)
-  ![BlippBuilder upload marker](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0200.bb_upload_marker.png)
+  ![Blippbuilder create blipp](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0190.bb_create_bipp.png)
+  ![Blippbuilder upload marker](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0200.bb_upload_marker.png)
 4. You'll be redirected to blipp builder UI. Make the necessary changes to your blipp:
 
-  ![BlippBuilder visual experience editor](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0210.bb_create_experience.png)
+  ![Blippbuilder visual experience editor](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/0210.bb_create_experience.png)
 5. Once you have done the necessary changes you will have two options: you can either test the blipp with one of the applications available to you or you can publish the blipp for one of the applications available to you. Press the "Preview" button to test the blipp. Press the "Publish" button to publish the blipp to live. Please refer to the chapters "Testing" and "Publishing" for the Blippar Script JS blipps above to get more information about blipp testing and publishing, the Blippbuilder blipps publishing the process is exactly the same as for the JS blipps.
 
 If you are still using one of the old Blippar SDK versions (Blippar SDK version 2.1.x or earlier) please refer to the old publishing flow manual: [Old Publishing Flow](old-publishing-flow.md).
