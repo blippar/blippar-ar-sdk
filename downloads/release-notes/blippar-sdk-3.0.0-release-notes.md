@@ -9,7 +9,7 @@ This release is a major release with the addition of tighter app <-> blipp commu
 * Added support for native AR via marker-based SLAM.
 * Added new APIs to the camera classes to receive the camera frame on the app side (see [Camera](../../guides/camera.md) document for more).
 * Added APIs to clear the blipp and sideload cache.
-* Removed Facebook, Twitter & Instagram targeted sharing from the SDK and BlippJS APIs as it is no longer supported by iOS. Default prefill text (when none is specified by a developer), is now only set when `shareBlipp` is called. This is so Instagram can be targeted, which does not appear if there is any text being shared.
+* Removed Facebook, Twitter & Instagram targeted sharing from the SDK and Blippbuilder Script APIs as it is no longer supported by iOS. Default prefill text (when none is specified by a developer), is now only set when `shareBlipp` is called. This is so Instagram can be targeted, which does not appear if there is any text being shared.
 * New documentation portal created.
 
 ### Android
@@ -80,6 +80,6 @@ None
 
 October 2018
 
-## **Blipp JS Maximum Library Supported**
+## **Blippbuilder Script Maximum Library Supported**
 
 1.9.x

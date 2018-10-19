@@ -6,7 +6,7 @@ Using this mechanism it is possible to create complex custom behaviour or even h
 
 ## Calling into the blipp from the app
 
-Once a blipp is launched, either your own app or the BlipparSDKViewController/BlipparSDKFragment cache the BlippContext. On each context there is a method to allow a user to execute a given BlippJS function.
+Once a blipp is launched, either your own app or the BlipparSDKViewController/BlipparSDKFragment cache the BlippContext. On each context there is a method to allow a user to execute a given Blippbuilder Script function.
 
 **Objective C**
 
@@ -25,7 +25,7 @@ Once a blipp is launched, either your own app or the BlipparSDKViewController/Bl
 
 In the examples above a script function called `jsFunction` is called with named parameter `param1` which has a JSON string as a value. JS currently doesn't support named parameters, this support is there for possible other scripting languages. It can be left as null/nil if desired.
 
-In the BlippJS the function executed will be as follows:
+In the Blippbuilder Script the function executed will be as follows:
 
     blipp.jsFunction = function(jsonValue) {
         if (jsonValue !== undefined) {
@@ -38,7 +38,12 @@ The blipp runs in a different thread to the UI thread, so calls into the blipp a
 
 ## Calling the host app from the blipp
 
-The BlippJS is able to use the App `sendAppEvent` function. This function takes an event name, and an optional JSON string.
+The Blippbuilder Script is able to use the App `sendAppEvent` function.
+
+To access this feature you need to use the Blippbuilder Script library `1.9.1`. You can set this in the package.json associated with your blipp.
+If running pre-1.9.1 you can use `blipp.getApp().dispatchEvent` instead.
+
+ This function takes an event name, and an optional JSON string.
 
     // No json passsed to the app
     blipp.getApp().sendAppEvent("event1");
@@ -48,7 +53,7 @@ The BlippJS is able to use the App `sendAppEvent` function. This function takes 
 To receive events in the host app you need to register as a Blipp delegate or listener. The `onBlippEvent` callback is invoked on each registered blipp delegate or listener and is called in the same sequence that it was registered with the SDK. The first to return true causes the event to stop propogating.
 
 >![Info Icon](https://blippar-devportal-dev.s3.amazonaws.com/media/uploads/BlipparSDK_Info.png) 
->Events arrive in on a background thread, to minimise latency with the BlippJS. Do not perform UI operations on a background thread or your app will crash!
+>Events arrive in on a background thread, to minimise latency with the Blippbuilder Script. Do not perform UI operations on a background thread or your app will crash!
 
 **Objective C**
 

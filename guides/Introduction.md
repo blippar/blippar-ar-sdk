@@ -107,9 +107,9 @@ You have complete control over which blipps are run in the SDK (you can launch a
 
 The Blippar SDK will only run blipps that belong to you and are associated with your license, or ones designed by Blippar for testing the SDK. The Marker Detector will not detect anybody else's markers.
 
-##Blipp JS API Versions
+##Blippbuilder Script API Versions
 
-BlippJS is a Javascript API that defines functionality available in the blipp. You can find a full JS API reference on [developer portal](https://developer.blippar.com/portal/ar-api/home/). Each Blippar SDK supports a certain Blipp JS API version, which is mentioned in its release notes. Blipp JS API calls, introduced after the SDK release are not supported and should not be used in blipps. If the blipp is created in the Blippbuilder be sure to select the target SDK version correctly when creating a blipp. Select the lowest SDK version your app is currently using. Blippar SDKs are backwards compatible, which means that all newer SDKs will also be able to run the blipp that has been created using the older Blipp JS API version or is targeting an older SDK version in the Blippbuilder.
+Blippbuilder Script is a Javascript API that defines functionality available in the blipp. You can find a full JS API reference on [developer portal](https://developer.blippar.com/portal/ar-api/home/). Each Blippar SDK supports a certain Blippbuilder Script API version, which is mentioned in its release notes. Blippbuilder Script API calls, introduced after the SDK release are not supported and should not be used in blipps. If the blipp is created in the Blippbuilder be sure to select the target SDK version correctly when creating a blipp. Select the lowest SDK version your app is currently using. Blippar SDKs are backwards compatible, which means that all newer SDKs will also be able to run the blipp that has been created using the older Blippbuilder Script API version or is targeting an older SDK version in the Blippbuilder.
 
 ## Blipp Caching
 

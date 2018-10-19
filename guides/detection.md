@@ -15,7 +15,7 @@ Camera images are also sent to the image and face trackers (if active) on the de
 There are a few different modes of detection:
 
 * **Default** detection detects markers and VS entities. Everything will be detected including barcodes and barcode markers
-* **Markers**. In this mode only markers as set up in the Hub CMS system are being detected in the SDK.
+* **Markers**. In this mode only markers as set up in the Blippar Hub CMS system are being detected in the SDK.
 * **Barcodes**. Barcode detection is device-side only. The SDK looks at images coming from the camera and looks for common barcodes in the image, such as EAN-8, EAN-13.
     >Note: Barcodes only work if the device is held approximately parallel or at right angles to the barcode.
 * **Barcode Markers**. It is possible to associate a barcode with a blipp. To do so see the publishing a blipp section of the documentation and associating a barcode. When barcodes are detected on the device they are sent to the server alongside the camera image. If a barcode is associated with a blipp the blipp is started immediately, that is without waiting for a tracking lock.
@@ -26,7 +26,7 @@ Entity descriptors wrap up of different types of SDK entities, such as blipp mar
 
 The `onDetectionResults` callback will receive a list of entities that have been recognised. There are blipps, barcodes or visual search entities that match based on the sent camera image. Each entity descriptor has an associated type and data specific to that type. The most commonly used type of entity is a blipp descriptor, which can used to launch blipp experiences with the SDK.
 
-The default SDK view controller/fragment that is included with the SDK automatically launches blipps from any blipp entity descriptors found during detection, i.e. blipps set up in the Hub CMS. This behaviour can be altered if desired by overloading the implementation of the detection callbacks in the app's own code.
+The default SDK view controller/fragment that is included with the SDK automatically launches blipps from any blipp entity descriptors found during detection, i.e. blipps set up in the Blippar Hub CMS. This behaviour can be altered if desired by overloading the implementation of the detection callbacks in the app's own code.
 
 It is also possible to programatically create Blipp entity descriptors from information, such as a Blipp's identifying "Address".  You can then launch the corresponding blipp directly without requiring any marker detection at all.
 
