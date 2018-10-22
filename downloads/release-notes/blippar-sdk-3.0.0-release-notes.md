@@ -1,6 +1,6 @@
 # Blippar SDK 3.0.0 Release notes
 
-This release is a major release with the addition of tighter app <-> blipp communication, streaming video, face tracking and native AR (ARCore/ARKit) integration.
+This release is a major release with the addition of tighter app <-> blipp communication, streaming video and native AR (ARCore/ARKit) integration.
 
 ## **Major Changes**
 
