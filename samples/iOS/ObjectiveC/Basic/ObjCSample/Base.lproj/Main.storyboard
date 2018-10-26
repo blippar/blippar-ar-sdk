@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z3Q-6p-fi4">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z3Q-6p-fi4">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,15 +14,15 @@
             <objects>
                 <tableViewController id="vo7-VP-7t2" customClass="SampleTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="32w-3k-kY0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowBlippsCell" id="A5E-h5-gp8">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A5E-h5-gp8" id="gLS-17-rZ1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -46,7 +46,7 @@
             <objects>
                 <navigationController id="Z3Q-6p-fi4" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hie-Pb-cNC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -66,12 +66,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCI-BL-VxM" customClass="BlipparSDKView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Detection" translatesAutoresizingMaskIntoConstraints="NO" id="ez2-qo-Zct">
+                                        <rect key="frame" x="48" y="128" width="224" height="224"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ez2-qo-Zct" secondAttribute="height" multiplier="1:1" id="EOS-d4-yja"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ez2-qo-Zct" firstAttribute="width" secondItem="rCI-BL-VxM" secondAttribute="width" multiplier="0.7" id="AVB-xO-gcl"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y97-s6-eKq" customClass="ProgressView">
                                 <rect key="frame" x="10" y="74" width="20" height="20"/>
@@ -82,7 +93,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-CV-qyj">
-                                <rect key="frame" x="117.5" y="603" width="140" height="44"/>
+                                <rect key="frame" x="90" y="416" width="140" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="QO4-Nz-4l2"/>
                                     <constraint firstAttribute="height" constant="44" id="nfY-Yp-MmS"/>
@@ -95,14 +106,32 @@
                                     <action selector="closeBlipButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQq-o5-oJM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiT-sM-UvN">
+                                <rect key="frame" x="128" y="389" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Bi4-8E-BYp"/>
+                                    <constraint firstAttribute="width" secondItem="JiT-sM-UvN" secondAttribute="height" multiplier="1:1" id="flz-U9-osb"/>
+                                </constraints>
+                                <state key="normal" image="Scanner"/>
+                                <connections>
+                                    <action selector="scanTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Knq-3G-CLy"/>
+                                    <action selector="scanTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="GKW-43-LhL"/>
+                                    <action selector="scanTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6G-v8-60k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rCI-BL-VxM" secondAttribute="trailing" id="5I0-sI-JxV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JiT-sM-UvN" secondAttribute="bottom" constant="27" id="GYb-PG-zbI"/>
+                            <constraint firstItem="ez2-qo-Zct" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Js3-lO-HL8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffd-CV-qyj" secondAttribute="bottom" constant="20" id="LZP-nW-xyR"/>
+                            <constraint firstItem="ez2-qo-Zct" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O5k-gf-xEs"/>
                             <constraint firstItem="rCI-BL-VxM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PRe-Pv-pxQ"/>
                             <constraint firstItem="y97-s6-eKq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="VjZ-rK-pln"/>
                             <constraint firstItem="Ffd-CV-qyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBx-Yr-p8B"/>
+                            <constraint firstItem="JiT-sM-UvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ciz-Q0-vcJ"/>
                             <constraint firstItem="rCI-BL-VxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fUg-e1-RQh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCI-BL-VxM" secondAttribute="bottom" id="irB-Yd-35n"/>
                             <constraint firstItem="y97-s6-eKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="j5h-lD-B8j"/>
@@ -111,7 +140,9 @@
                     <connections>
                         <outlet property="blippCloseButton" destination="Ffd-CV-qyj" id="3GU-NR-1PU"/>
                         <outlet property="blipparView" destination="rCI-BL-VxM" id="XSO-P9-Nmg"/>
+                        <outlet property="detectionAnimationView" destination="ez2-qo-Zct" id="wJP-EL-bJN"/>
                         <outlet property="progressView" destination="y97-s6-eKq" id="ZYj-uE-fYM"/>
+                        <outlet property="scanButton" destination="JiT-sM-UvN" id="U1L-JA-bus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,4 +150,8 @@
             <point key="canvasLocation" x="645.60000000000002" y="-45.42728635682159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Detection" width="240" height="240"/>
+        <image name="Scanner" width="128" height="128"/>
+    </resources>
 </document>
