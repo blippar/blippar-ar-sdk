@@ -136,11 +136,11 @@ The SDK provides a mechanism for the app to specify what version of the library 
 The below snippet shows the default value for all the SDK libraries, you can copy and paste it into your top level build.gradle and be sure that the app will match the SDK:
 
     project.ext {
-        buildToolsVersion = '27.0.3'
+        buildToolsVersion = '28.0.3'
         supportLibVersion = '27.1.1'
         googlePlayServicesVersion = '12.0.1'
         picassoVersion = '2.5.2'
-        arcoreVersion = '1.3.0'
+        arcoreVersion = '1.4.0'
         kotlinVersion = '1.2.61'
     }
 
