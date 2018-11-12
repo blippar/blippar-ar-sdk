@@ -1,6 +1,6 @@
 # Native AR Prerequisites
 
-## BlipparSDK and JS
+## BlipparSDK and JS
 
 * BlipparSDK version `3.0.0` or newer
 * BlippBuilder Script version `1.9.1` or newer
@@ -10,21 +10,21 @@
 * A9+ family of processors, this equates to **iPhone 6S and newer**.
 * Embedded in the operating system, as of **iOS 11**.
 
-### Known Limitations
+### Known Limitations
 
 * Between backgrounding and foregrounding the ARKit tracking can totally lose its bearings. It is recommended a blipp handles this and asks a user to re-track the marker
 * Camera cannot be stopped, or flipped to the front camera when active.
 * The torch controls do not work when active.
 * No dynamic focussing (as per ARKit 1.0, this is supported in ARKit 1.5)
 
-## Android - ARCore
+## Android - ARCore
 
 * **API 24** and upwards, that's Android Nougat or later.
 * **ARM-based devices only**, x86_64 and x86 based devices do not work (see [Issue #212](https://github.com/google-ar/arcore-android-sdk/issues/212) and [Issue #333](https://github.com/google-ar/arcore-android-sdk/issues/333))
 * ARCore is only available on **select devices** (see Supported Devices [here](https://developers.google.com/ar/discover/supported-devices))
 * **NOT** embedded in the operating system. Requires ARCore installed on the device. The SDK will ask the user to install the ARCore SDK from the Google Play Store if it is not already installed.
 
-### Known limitations (as of ARCore 1.4.0)
+### Known limitations (as of ARCore 1.4.0)
 
 * There are many reasons why ARCore can fail to run (or be supported): ARCore is not installed, ARCore is out of date, device not compatible, APK is too old (for sideloading ARCore) or Android OS version not supported
 * Camera cannot be stopped, or flipped to the front camera when active.

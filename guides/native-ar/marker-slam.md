@@ -2,15 +2,15 @@
 
 With the traditional marker-based tracking whenever the camera loses sight of the target, tracking is lost and the blipp would 'peel' to the screen. SLAM tracking allows tracking to be maintained even when the target is lost in the camera view. It uses a combination of ARKit/ARCore and the device sensors to keep track of the position and orientation of the target relative to the device. Tracking also happens in real world coordinates, allowing a developer to place items to scale in their surroundings. To see a quick and basic demo video of it in operation see [here](../../assets/SLAM-demo-short.mp4).
 
-## Requirements
+## Requirements
 
 See [dependencies](native-ar-prerequisites.md) document for more.
 
-### Glossary
+### Glossary
 
 * `Native AR`: ARKit and ARCore frameworks on iOS and Android
 
-## How to Enable SLAM Tracking
+## How to Enable SLAM Tracking
 
 By default the normal marker tracker is enabled. To activate SLAM tracking you need to call `scene.setTracking` with a value of `'slam'`.
 
@@ -44,7 +44,7 @@ Below is an example of the SLAM command:
         }
     });
 
-## Horizon Lock
+## Horizon Lock
 
 By default Blippar SLAM aligns your world with gravity.  This minimises problems if the printed marker is not perfectly straight on the wall (or whereever it may be).  Without this feature, tiny alignment errors of your printed marker would mean your AR world would look like it was on a hill and would get worse the further away from the marker it was.
 
@@ -52,7 +52,7 @@ You can observe this feature by running your slam blipp and then twisting your m
 
 This mode helps make sure that the world aligns with the real world well, this may not be what is required and it can be disabled using `scene.setTracking('slamNoHorizonLock'....)`
 
-### Physical Based Markers
+### Physical Based Markers
 
 Traditionally in Blippar marker space operated in pixel space. That is, the blipp coordinate space was defined by the dimensions of the marker in pixels.
 
@@ -64,7 +64,7 @@ If the automatic marker proximity system is enabled then it also needs to know t
 
 The marker tracker uses pixels for configuring the world coordinate space. The SLAM tracker requires the coordinate space to be in real world coordinates. The blipp needs to tell indicate what the dimensions, position and orientation of the marker(s) are.
 
-#### Marker Attributes
+#### Marker Attributes
 
     blipp.getMarker().setPhysicalFacingDirection([0, 0, 1]);
     blipp.getMarker().setPhysicalSize([333, 258]);
@@ -84,7 +84,7 @@ The axes are relative to the orientation of the initial triggering marker, there
 
 Sets the physical size of a marker in world unit space, i.e. the printed object.  This is critical for the scaling to work correctly.  When the physicalSize attribute is set the marker automatically switches into world unit space mode which means that any objects attached to this marker will be sized and positioned using world unit space AND NOT marker pixels (which is the Blippar default)
 
-#### marker.setUnits( mm OR pixels )
+#### marker.setUnits( mm OR pixels )
 
 Sets the unit mode for objects attached to this marker. Blippar uses marker pixels by default but can be switched to real world unit space when using SLAM.  The system will automatically set to world unit space when the physicalSize attribute is used.
 
@@ -109,7 +109,7 @@ In this scenario the blipp is notified about the lost tracking and the best opti
 
 The blipp receives a number of notifications regarding the status of the SLAM system:
 
-### SLAM Callbacks
+### SLAM Callbacks
 
     scene.onSLAMTrack = function() {
         // SLAM tracking is locked on
@@ -129,9 +129,9 @@ The blipp receives a number of notifications regarding the status of the SLAM sy
 * onSLAMTrack: Called when the SLAM system is in normal tracking mode
 * onSLAMLost: Tracking has been lost, it can only be re-acquired if a user re-tracks the marker image. All SLAM models should be hidden in this call.
 
-## Blipp Developer: How to use Blippar SLAM
+## Blipp Developer: How to use Blippar SLAM
 
-### Designing a scene
+### Designing a scene
 
 When you are designing a Blipp for Blippar SLAM you need to think about things in a slightly different way.  When using SLAM, the AR environment you are creating will be projected into the real world and not just to an image marker.
 
@@ -139,7 +139,7 @@ A Blippar SLAM scene is very much like a normal blippar scene except that positi
 
 You can design a scene where objects can be anywhere, including behind, above and below you.
 
-### Triggering a Blipp
+### Triggering a Blipp
 
 Blipps are still triggered off a marker.  The marker is essentially the root or anchor of your scene.  You should design you environment such that the marker will be in a specific and exact position in the real world.  You can then arrange for objects to be in the correct relative position to that marker.
 
@@ -154,7 +154,7 @@ In order for the tracking systems to work correctly, Blippar needs to know the r
   
 Once you have set the marker's physical size in your Blipp, you cannot change it or the printed marker without making sure the numbers match.  You must coordinate with your clients to make sure that the printed markers WILL ALWAYS match the physical size set in the blipp otherwise the world will not fit correctly
 
-### Enabling Blippar SLAM for a simple case
+### Enabling Blippar SLAM for a simple case
 
 As a very simple example, to enable SLAM in your blipp for a single marker you need at least:
 
@@ -162,7 +162,7 @@ As a very simple example, to enable SLAM in your blipp for a single marker you n
 2. Set the marker physical size with blipp.getMarker().setPhysicalSize([w,h]);
 3. Add `scene.onSLAMTrack` and `scene.onSLAMLost` callbacks so you can observe issues if the system looses SLAM lock. It is recommended that you hide all geometry when SLAM tracking is lost and display UI to the user to re-acquire a marker.
 
-### Drift
+### Drift
 
 Like any image processing technology, ARKit/ARCore are not perfect.  They need really good detail and definition in the camera images to get a good lock.  In practice the lock drifts significantly over time so the alignment of your AR world will appear to move.  Each time the device sees your image marker then it will reposition and lock on correctly, but the longer it remains turned away from the marker, the further it will drift out of alignment.
 

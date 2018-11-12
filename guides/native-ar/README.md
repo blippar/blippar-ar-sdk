@@ -1,4 +1,4 @@
-# Native AR
+# Native AR
 
 The following guides indicate the various modes supported by the Blippar SDK when using ARKit and ARCore (Native AR).
 
