@@ -34,16 +34,16 @@ Generally in order to test a blipp a new blipp version has to be uploaded to the
 2. To manually upload blipp files for the custom app you can use `adb push` manually yourself to transfer over the the flattened blipp scripts and assets to the _blipparsdk/sideload_ directory in your app's bundle, creating the _sideload_ directory if it doesn't already exist.
 
     * On **OSX/Linux** you can use this [`deployToAndroid.sh`](../../scripts/deployToAndroid.sh) script to simplify this process.
-    To call the script above: 
+    To call the script above:
 
-            ./deployToAndroid.sh <app_package>/blipparsdk/sideload "/<local path to blipp data>/"
+        ./deployToAndroid.sh <app_package>/blipparsdk/sideload "/<local path to blipp data>/"
 
-    There is another script [`startDevAndroid.sh`](../../scripts/startDevAndroid.sh) which watches a blipp folder and automatically transfers the contents over to the device when it changes. This uses [`fswatch`](https://github.com/emcrisostomo/fswatch) which can be installed by doing:
+        There is another script [`startDevAndroid.sh`](../../scripts/startDevAndroid.sh) which watches a blipp folder and automatically transfers the contents over to the device when it changes. This uses [`fswatch`](https://github.com/emcrisostomo/fswatch) which can be installed by doing:
 
             brew install fswatch
 
-    To use the `startDevAndroid.sh` script call:
-    
+        To use the `startDevAndroid.sh` script call:
+
             ./startDev.sh ~/Downloads/blipps/surface-detection-demo 'com.blippar.ar.android'
 
     * On **Windows** you can use [`deployToAndroid.bat`](../../scripts/deployToAndroid.bat) and follow the instructions.
