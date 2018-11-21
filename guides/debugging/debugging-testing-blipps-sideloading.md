@@ -25,7 +25,7 @@ Generally in order to test a blipp a new blipp version has to be uploaded to the
 
 ### Prerequisites
 
-* OSX/Linux based operating system or Windows (convert .sh files to .bat files and modify bash commands accordingly).
+* OSX/Linux or Windows based operating system.
 * Android Debug Bridge installed and on the PATH.
 
 ## Steps
