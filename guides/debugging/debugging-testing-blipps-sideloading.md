@@ -36,7 +36,7 @@ Generally in order to test a blipp a new blipp version has to be uploaded to the
     * On **OSX/Linux** you can use this [`deployToAndroid.sh`](../../scripts/deployToAndroid.sh) script to simplify this process.
     To call the script above:
 
-        ./deployToAndroid.sh <app_package>/blipparsdk/sideload "/<local path to blipp data>/"
+            ./deployToAndroid.sh <app_package>/blipparsdk/sideload "/<local path to blipp data>/"
 
         There is another script [`startDevAndroid.sh`](../../scripts/startDevAndroid.sh) which watches a blipp folder and automatically transfers the contents over to the device when it changes. This uses [`fswatch`](https://github.com/emcrisostomo/fswatch) which can be installed by doing:
 
