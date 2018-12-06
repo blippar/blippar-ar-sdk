@@ -165,7 +165,7 @@ There are a few different ways to deploy your app to the Play Store. A universal
 One previous attempt by Google to fix this was to use [apk splits](https://developer.android.com/studio/build/configure-apk-splits) however it is a overly complex in terms of managing multiple binaries and versioning.
 The preferred and best method now for splitting up your APK is to use [App Bundles](https://developer.android.com/guide/app-bundle/). Instead of generating an APK you generate an AAB file which is then uploaded to the Play Store. Like the AppStore, a target device then only receives exactly the files it needs, no extra architectures. It is recommended to thoroughly read the [documentation](https://developer.android.com/guide/app-bundle/) on how to generate, test and deploy them. This is the most optimal way to upload your app when it includes the BlipparSDK, the size saving will by at least 25% but likely to be much higher.
 
-Taking a concrete example, the demo app for the Blippar SDK is 98MB when built as a universal APK. This includes all the architectures even for x86-based devices. When using App Bundles this becomes (for arm-based devices which are the vast majority of Android devices in the market):
+Taking a concrete example, the demo app for the Blippar SDK is `98MB` when built as a universal APK. This includes all the architectures even for x86-based devices. When using App Bundles this becomes (for arm-based devices which are the vast majority of Android devices in the market):
 
     arm64-v8a = 18.1MB
     armeabi-v7a = 15.5MB
