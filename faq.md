@@ -150,7 +150,7 @@ No, we we do not support BitCode for performance reasons.
 A little bit of background: Bitcode is a representation of the compiled application that when submitted to the app store (or iTunes connect), Apple will automatically optimize for future platforms without having to resubmit the application. Bitcode essentially allows to recompile your app on apple’s servers before distribution.
 The Blippar SDK is heavily dependant on various low level NEON optimisations to improve rendering and tracking performance. These optimisations are particular to individual architectures of current iOS device types, therefore re-compilation by Apple for (potentially) unknown device types is currently disabled.
 
-## What size is the BlipparSDK?
+## What size is the BlipparSDK?
 
 The BlipparSDK ships as a framework on iOS and aar on Android. However your app will **not** increase by the file size of the SDK.
 
@@ -167,8 +167,8 @@ The preferred and best method now for splitting up your APK is to use [App Bundl
 
 Taking a concrete example, the demo app for the Blippar SDK is 98MB when built as a universal APK. This includes all the architectures even for x86-based devices. When using App Bundles this becomes (for arm-based devices which are the vast majority of Android devices in the market):
 
-  arm64-v8a = 18.1MB
-  armeabi-v7a = 15.5MB
+    arm64-v8a = 18.1MB
+    armeabi-v7a = 15.5MB
 
 ---
 
