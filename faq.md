@@ -156,20 +156,24 @@ The BlipparSDK ships as a framework on iOS and aar on Android. However your app 
 
 The SDK includes a number of architectures so it is supported across all devices.
 
-For iOS the thin framework (the one for submitting to the store) includes armv7 and arm64, the fat framework also includes x86 and i386 for the simulator.
+For iOS the _thin_ framework (the one for submitting to the store, the fat framework contains simulator architectures which Apple will reject if uploaded) includes _armv7_ and _arm64_.
 
 On iOS when you upload to the AppStore a process called 'App Thinning' which splits the uploaded IPA into pieces and only delivers exactly what is needed to a target device. This means that the extraneous architectures in the app are stripped out reducing its size.
 The iOS Objective C sample app IPA is `14.8MB`. And on the store Apple report the actual download size ranging from 12-12.9MB depending on the device type.
 
-For Android the SDK includes armeabi-v7a, arm64-v8a, x86 and x86_64 architectures. The SDK includes native libraries build specifically for these architectures.
-There are a few different ways to deploy your app to the Play Store. A universal APk is a single app binary and is delivered to the device as a whole. This APK contains all your architectures, there is a lot of wastage. A user who has an armv7 device will receive the arm64, x86 and x86_64 architectures even though they can never run on that device.
-One previous attempt by Google to fix this was to use [apk splits](https://developer.android.com/studio/build/configure-apk-splits) however it is a overly complex in terms of managing multiple binaries and versioning.
-The preferred and best method now for splitting up your APK is to use [App Bundles](https://developer.android.com/guide/app-bundle/). Instead of generating an APK you generate an AAB file which is then uploaded to the Play Store. Like the AppStore, a target device then only receives exactly the files it needs, no extra architectures. It is recommended to thoroughly read the [documentation](https://developer.android.com/guide/app-bundle/) on how to generate, test and deploy them. This is the most optimal way to upload your app when it includes the BlipparSDK, the size saving will by at least 25% but likely to be much higher.
+For Android the SDK includes _armeabi-v7a_, _arm64-v8a_, _x86_ and _x86_64_ architectures. The SDK includes native libraries built to specifically target these architectures.
+There are a few different ways to deploy your app to the Play Store. 
 
-Taking a concrete example, the demo app for the Blippar SDK is `98MB` when built as a universal APK. This includes all the architectures even for x86-based devices. When using App Bundles this becomes (for arm-based devices which are the vast majority of Android devices in the market):
+* A **universal APk** is a single app binary and is delivered to the device as a whole. This APK contains all your architectures, there is a lot of wastage. A user who has an _armv7_ device will receive the _arm64_, _x86_ and _x86_64_ architectures even though they can never run on that device.
+* One previous attempt by Google to fix this was to use **[apk splits](https://developer.android.com/studio/build/configure-apk-splits)** however it is a overly complex in terms of managing multiple binaries and versioning.
+* The preferred and best method now for splitting up your APK is to use **[App Bundles](https://developer.android.com/guide/app-bundle/)**. Instead of generating an APK you generate an AAB file which is then uploaded to the Play Store. Like the AppStore, a target device then only receives exactly the files it needs, no extra architectures. It is recommended to thoroughly read the [documentation](https://developer.android.com/guide/app-bundle/) on how to generate, test and deploy them. This is the most optimal way to upload your app when it includes the BlipparSDK, the size saving will by at least 25% but likely to be much higher.
 
-    arm64-v8a = 18.1MB
-    armeabi-v7a = 15.5MB
+  Taking a concrete example, the demo java app for the Blippar SDK is `98MB` when built as a **universal APK**. This includes all the architectures even for x86-based devices.
+  
+  When using **App Bundles** this becomes (for _arm-based_ devices which are the vast majority of Android devices in the market):
+
+      arm64-v8a = 18.1MB
+      armeabi-v7a = 15.5MB
 
 ---
 
