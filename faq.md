@@ -158,11 +158,11 @@ The SDK includes a number of architectures so it is supported across all devices
 
 For iOS the _thin_ framework (the one for submitting to the store, the fat framework contains simulator architectures which Apple will reject if uploaded) includes _armv7_ and _arm64_.
 
-On iOS when you upload to the AppStore a process called 'App Thinning' which splits the uploaded IPA into pieces and only delivers exactly what is needed to a target device. This means that the extraneous architectures in the app are stripped out reducing its size.
-The iOS Objective C sample app IPA is `14.8MB`. And on the store Apple report the actual download size ranging from 12-12.9MB depending on the device type.
+When you upload to the AppStore a process called 'App Thinning' which splits the uploaded IPA into pieces and only delivers exactly what is needed to a target device. This means that the extraneous architectures in the app are stripped out reducing its size.
+The iOS Objective C sample app IPA is `14.8MB`. And on the store Apple report the actual download size ranging from `12-12.9MB` depending on the device type.
 
 For Android the SDK includes _armeabi-v7a_, _arm64-v8a_, _x86_ and _x86_64_ architectures. The SDK includes native libraries built to specifically target these architectures.
-There are a few different ways to deploy your app to the Play Store. 
+There are a few different ways to deploy your app to the Play Store.
 
 * A **universal APK** is a single app binary and is delivered to the device as a whole. This APK contains all your architectures, there is a lot of wastage. A user who has an _armv7_ device will receive the _arm64_, _x86_ and _x86_64_ architectures even though they can never run on that device.
 * One previous attempt by Google to fix this was to use **[apk splits](https://developer.android.com/studio/build/configure-apk-splits)** however it is a overly complex in terms of managing multiple binaries and versioning.
