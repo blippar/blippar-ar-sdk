@@ -164,12 +164,12 @@ The iOS Objective C sample app IPA is `14.8MB`. And on the store Apple report th
 For Android the SDK includes _armeabi-v7a_, _arm64-v8a_, _x86_ and _x86_64_ architectures. The SDK includes native libraries built to specifically target these architectures.
 There are a few different ways to deploy your app to the Play Store. 
 
-* A **universal APk** is a single app binary and is delivered to the device as a whole. This APK contains all your architectures, there is a lot of wastage. A user who has an _armv7_ device will receive the _arm64_, _x86_ and _x86_64_ architectures even though they can never run on that device.
+* A **universal APK** is a single app binary and is delivered to the device as a whole. This APK contains all your architectures, there is a lot of wastage. A user who has an _armv7_ device will receive the _arm64_, _x86_ and _x86_64_ architectures even though they can never run on that device.
 * One previous attempt by Google to fix this was to use **[apk splits](https://developer.android.com/studio/build/configure-apk-splits)** however it is a overly complex in terms of managing multiple binaries and versioning.
 * The preferred and best method now for splitting up your APK is to use **[App Bundles](https://developer.android.com/guide/app-bundle/)**. Instead of generating an APK you generate an AAB file which is then uploaded to the Play Store. Like the AppStore, a target device then only receives exactly the files it needs, no extra architectures. It is recommended to thoroughly read the [documentation](https://developer.android.com/guide/app-bundle/) on how to generate, test and deploy them. This is the most optimal way to upload your app when it includes the BlipparSDK, the size saving will by at least 25% but likely to be much higher.
 
   Taking a concrete example, the demo java app for the Blippar SDK is `98MB` when built as a **universal APK**. This includes all the architectures even for x86-based devices.
-  
+
   When using **App Bundles** this becomes (for _arm-based_ devices which are the vast majority of Android devices in the market):
 
       arm64-v8a = 18.1MB
