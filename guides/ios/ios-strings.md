@@ -83,6 +83,20 @@ in the appropriate language. See <strong>BlipparSDKTypes.h</strong> for the same
         </tr>
         <tr>
             <td>
+                BSDK_STRING_SHARING_COMPLETE
+            </td>
+            <td>
+                <p>
+                    <span>Thanks for sharing!</span>
+                </p>
+            </td>
+            <td>
+                <span style="color: rgb(51,51,51);">In Blipp Share Screen</span>
+            </td>
+            <td>When a user shares a photo in the photoshare screen</td>
+        </tr>
+        <tr>
+            <td>
                 BSDK_STRING_WEBVIEW_COPY_LINK
             </td>
             <td>
